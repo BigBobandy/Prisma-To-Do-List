@@ -11,10 +11,15 @@ datasource db {
 }
 
 
-// This is the structure for my database.
+// Here I created the structure for my database.
 // I then run the command "npx prisma migrate dev --name init"
 // This takes the structure and translates it into a SQL script 
 // Prisma then executes that script and creates a table in my SQLite database that matches the structure in the prisma model
+
+// After this is done i run the command "npx prisma generate"
+// This will generate a Prisma Client that lets me interact with my database
+// I then need to import the Prisma Client into my index.js (express server)
+
 model Todo {
   // Integer that automatically increments each time a new task is created
   id Int  @id @default(autoincrement())

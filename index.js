@@ -1,5 +1,10 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const { PrismaClient } = require("@prisma/client");
+
+// Instantiate(create an instance of) the client
+// This is the prisma object that i will use in my route handlers to make queries to my database
+const prisma = new PrismaClient();
 
 // Create Express app
 const app = express();
