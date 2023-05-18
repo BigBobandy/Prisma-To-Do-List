@@ -1,0 +1,25 @@
+{
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "prettier-plugin-prisma": "^4.13.0"
+  },
+  "name": "prisma-to-do-list",
+  "description": "A to do list made with prisma. The purpose of this project is to give me a better understanding of MVC (Models, View, and Controllers) architecture.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "prettier": "^2.8.8",
+    "prisma": "^4.14.1",
+    "sqlite3": "^5.1.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "start": "node index.js",
+     "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
