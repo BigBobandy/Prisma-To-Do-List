@@ -6,6 +6,28 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
+}
+
+
+// This is the structure for my database.
+// I then run the command "npx prisma migrate dev --name init"
+// This takes the structure and translates it into a SQL script 
+// Prisma then executes that script and creates a table in my SQLite database that matches the structure in the prisma model
+model Todo {
+  // Integer that automatically increments each time a new task is created
+  id Int  @id @default(autoincrement())
+
+  // String that will hold the name of the title
+  title String
+
+  // Boolean to check if task is completed or not. By default it is set to false
+  completed Boolean @default(false)
+
+  // Timestamp that gets created whenever a new task is created
+  createdAt DateTime @default(now())
+
+  // Timestamp that gets updated to the current time when an existing task is updated
+  updatedAt DateTime @updatedAt
 }
