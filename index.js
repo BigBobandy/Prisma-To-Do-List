@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+var cors = require("cors");
 // Importing the PrismaClient
 const { PrismaClient } = require("@prisma/client");
 
@@ -9,6 +10,8 @@ const prisma = new PrismaClient();
 
 // Create Express app
 const app = express();
+
+app.use(cors());
 
 // Use body-parser middleware to parse incoming JSON
 app.use(bodyParser.json());

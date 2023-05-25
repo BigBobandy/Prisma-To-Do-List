@@ -1,0 +1,6 @@
+.title-card {
+  background-color: var(--background-color);
+  border: 3px solid var(--primary-color);
+  margin: 1rem;
+  padding: 1rem;
+}

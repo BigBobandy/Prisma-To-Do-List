@@ -1,0 +1,22 @@
+.list-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  color: black;
+}
+
+.list-container {
+  background-color: var(--background-color);
+  width: 50rem;
+  padding: 1rem;
+  border: 3px solid var(--primary-color);
+
+  font-size: larger;
+  color: var(--primary-color);
+}
+
+.checkbox {
+  cursor: pointer;
+}
