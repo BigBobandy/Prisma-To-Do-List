@@ -7,6 +7,12 @@ import TitleCard from "./components/TitleCard";
 function App() {
   const [inputValue, setInputValue] = useState("");
   const [todos, setTodos] = useState([]);
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Function to handle toggling dark mode
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
 
   // GET Handler
   // This useEffect hook is used to fetch the todos from the Express sever
@@ -119,7 +125,10 @@ function App() {
   };
 
   return (
-    <div>
+    <div className={`app ${darkMode ? "dark-mode" : ""}`}>
+      <button onClick={toggleDarkMode} className="dark-mode-button">
+        Switch to Dark Mode
+      </button>
       <div className="top-container">
         <TitleCard />
         <div className="main-container">

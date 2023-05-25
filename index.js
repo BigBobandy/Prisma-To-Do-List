@@ -165,5 +165,6 @@ app.delete("/todos/:id", async (req, res) => {
     Testing the DELETE /todos/:id with this line in the terminal:
         Invoke-RestMethod -Method Delete -Uri "http://localhost:3000/todos/1"
 
+    You can also use the command 'npx prisma studio' to view the data base in a browser tab.
 
 */
